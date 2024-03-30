@@ -121,6 +121,19 @@
     \end{minipage}    
     }
 
+    \newenvironment{projectlong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}    
+    }
+
 
 
 %----------------------------------------------------------------------------------------
@@ -161,85 +174,47 @@ Highly motivated Software Engineer with over 3 years of experience building and 
 %Experience
 \section{Work Experience}
 
-
 \begin{joblong}{Cloud Computing Educator}{Aug 2022 - present}
-\item Developed and implemented cloud computing, artificial intelligence, and cybersecurity curriculums for grades 10-12, aligning with industry standards and preparing students for AWS professional certifications.
-\item Organized hackathons, coding competitions, and tech workshops, fostering a vibrant student tech community and promoting practical skill development.
+\item Developed and implemented cloud computing, artificial intelligence, and cybersecurity curriculums (grades 10-12) aligned with industry standards, preparing students for AWS professional certifications. Organized hackathons, coding competitions, and tech workshops, fostering a vibrant student tech community and promoting practical skill development.
 \end{joblong}
 
 \begin{joblong}{Software Engineer}{Jan 2022 - May 2022}
-    \item Enhanced user experience and implemented multi-language support for CODOT, a client application, improving user accessibility and global reach.
-    \item Developed front-end components and implemented robust authentication/ authorization protocols for CarFlow, ensuring secure data access and management.
-    \item Integrated and managed a Shopify e-commerce platform for Karima Sharabi, streamlining online sales operations.
-\end{joblong}
-
-\begin{joblong}{Software Development Engineer Intern}{Sep 2021 - Dec 2021}
-    \item Architected a cost-efficient, serverless architecture for the merchant dashboard, achieving an impressive 80 percent cost reduction.
-    \item Developed front-end components and implemented robust authentication/ authorization protocols for CarFlow, ensuring secure data access and management.
-    \item Optimized Unipal's SEO through server-side rendering, leading to a 10 percent improvement in search engine ranking.
+    \item Enhanced user experience and implemented multi-language support for CODOT, a client application, improving accessibility and global reach. Developed front-end components and implemented robust authentication/authorization protocols for CarFlow, ensuring secure data access and management. Integrated and managed a Shopify e-commerce platform for Karima Sharabi, streamlining online sales operations.
 \end{joblong}
   
-%Projects
+%LProjects
 \section{Projects}
 
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\begin{projectlong}{Multilingual Document Translation Application}{}
+    \item Developed a full-stack document translation application using React.js for the frontend and a robust Python backend with AWS integration. This user-friendly application allows users to upload various document formats (text, PDF, PowerPoint), select source and target languages, and receive translated versions with the original formatting preserved.
+\end{projectlong}
 
-\textbf{Multilingual Document Translation Application} & \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{Using React.js for the frontend and a robust backend powered by AWS services. Users can upload various document formats (text, PDF, PowerPoint), select source and target languages, and receive translated versions with the original formatting preserved. This application empowers users to translate documents seamlessly while maintaining their original structure.}  \\
+\begin{projectlong}{NVTC Chatbot}{}
+    \item Developed a highly scalable, production-ready web chatbot using Flask, Python, OpenAI, MySQL, and SpaCy. Designed and integrated a custom knowledge base to answer user queries effectively and implemented an automated pipeline for user input collection, streamlining user experience.
+\end{projectlong}
 
-\end{tabularx}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-
-\textbf{NVTC Chatbot} & \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{
-        \item Designed and integrated a custom knowledge base to answer user queries effectively.
-        \item Implemented an automated pipeline for user input collection, streamlining user experience and ensuring data accuracy.}  \\
-    
-\end{tabularx}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-
-    \textbf{Unipal on AWS} & \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
-    \multicolumn{2}{@{}X@{}}{
-        \item Architected a cost-efficient, serverless platform Unipal on AWS.
-        \item Leveraged Next.js, TailwindCSS, DynamoDB, Cognito, GraphQL, Amplify, AppSync, and CloudFormation.
-        \item Achieved an impressive 80 percent cost reduction through serverless architecture and optimized SEO with server-side rendering. }  \\
-    
-\end{tabularx}
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
 \section{Education}
 \begin{tabularx}{\linewidth}{@{}l X@{}}	
-
-
 2017 - 2022 & Software Engineering Bachelor's Degree at \textbf{University of Bahrain}  \\ 
-
-
 \end{tabularx}
-
-%----------------------------------------------------------------------------------------
-%	PUBLICATIONS
-%----------------------------------------------------------------------------------------
-\section{Publications}
-\begin{refsection}[citations.bib]
-\nocite{*}
-\printbibliography[heading=none]
-\end{refsection}
 
 %----------------------------------------------------------------------------------------
 %	SKILLS
 %----------------------------------------------------------------------------------------
-\section{Skills}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-Some Skills &  \normalsize{This, That, Some of this and that etc.}\\
-Some More Skills  &  \normalsize{Also some more of this, Some more that, And some of this and that etc.}\\  
-\end{tabularx}
+\section{Certifications}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+2024 & \textbf{AWS Certified Solutions Architect Associate}  \\ 
+2023 & \textbf{AWS Verified Educator}  \\ 
+2023 & \textbf{Google Cloud Champion Innovator - Cloud AI/ML}  \\ 
+2022 & \textbf{Certified Microsoft Azure Administrator Associate}  \\ 
+2022 & \textbf{Google Data Analytics Professional Certificate}  \\ 
 
-\vfill
-\center{\footnotesize Last updated: \today}
+
+\end{tabularx}
 
 \end{document}
     
