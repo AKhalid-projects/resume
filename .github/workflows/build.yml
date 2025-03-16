@@ -1,11 +1,8 @@
-name: build
+name: Build LaTeX and Upload PDF
 on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      DIR: .
-      FILE: cv
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v3
@@ -13,16 +10,14 @@ jobs:
       - name: Build LaTeX file
         uses: dante-ev/latex-action@latest
         with:
-          root_file: ${{ env.FILE }}
-          working_directory: ${{ env.DIR }}
+          root_file: cv
+          working_directory: .
 
-      - name: Move generated PDF
-        run: |
-          mkdir -p github_artifacts
-          mv ${{ env.DIR }}/${{ env.FILE }}.pdf ./github_artifacts/
+      - name: Verify PDF exists
+        run: ls -la ./cv.pdf
 
       - name: Upload PDF as artifact
         uses: actions/upload-artifact@v2
         with:
-          name: ${{ env.FILE }}.pdf
-          path: ./github_artifacts/cv.pdf
+          name: cv.pdf
+          path: ./cv.pdf
